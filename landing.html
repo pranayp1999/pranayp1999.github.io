@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Landing</title>
+	<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+	<style>
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Bangers';font-size: 22px;
+}
+h1 {
+  background-color: black;
+  color: white;
+   left: 50%;
+    top: 30%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+button{
+	 background-color: black;
+  color: white;
+   left: 50%;
+    top: 50%;
+    position: relative;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+   background-color: #FAEBD7;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="rain.mp4" type="video/mp4">
+
+</video>
+<h1> Welcome! </h1>
+<a href="index.html"><button><span> Go </span></button></a>
+</body>
+</html>

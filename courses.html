@@ -1,0 +1,215 @@
+ <html>
+<head>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Englebert ' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  
+<title> Registration </title>
+<script>
+    function valid(){ 
+     var user = document.forms["REG"]["user"];
+   if (user.value == "") { 
+            window.alert("Please enter your username"); 
+            user.focus(); 
+            return false; 
+        } 
+     var email = document.forms["REG"]["email"];
+   if (email.value == "") { 
+            window.alert("Please enter your email id"); 
+            email.focus(); 
+            return false; 
+        } 
+  var pass = document.forms["REG"]["password"];
+   if (pass.value == "") { 
+            window.alert("Please enter your password"); 
+            pass.focus(); 
+            return false; 
+        } 
+     var repass = document.forms["REG"]["repass"];
+   if (repass.value == "") { 
+            window.alert("Please confirm your password"); 
+            repass.focus(); 
+            return false; 
+        } 
+     // var phno = document.forms["REG"]["phno"];
+   // if (phno.value == "") { 
+  //           window.alert("Please enter your phone number"); 
+  //           phno.focus(); 
+  //           return false; 
+  //       }
+        
+         return true;
+     }
+
+</script>
+<style>
+  .topnav {
+  overflow: hidden;
+  background-color: #333;
+  height: 75px;
+}
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+  body {
+background-color: #d0fefe;
+  font-family: 'Englebert';font-size: 22px;
+  background-image: url("home.jpg");
+  
+}
+form {
+border: 4px solid #f1f1f1;
+margin: 0px;
+}
+h1 {text-align: center;}
+input[type=text], input[type=number], input[type=tel] {
+  width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 20px;
+background-color: #FAEBD7;
+}
+label {
+ 
+font-size: 30px;
+}
+
+img{
+  max-width: 100%
+  height="auto";
+}
+.button  {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #FAEBD7;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  
+ 
+  transition: all 0.5s;
+  cursor: pointer;
+  
+padding: 14px 20px;
+margin: 8px 0px;
+
+
+width: 100%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.register {
+    left: 50%;
+    top: 70%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    margin: 20px;
+}
+
+.formFields {
+padding: 8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="topnav">
+  <image src="logo.png" class="img"></image> 
+  <a href="home.php"> Home </a>
+  <a href="courses.html">Courses</a>
+  <a href="contact.html">Contact</a>
+  <a href="logout.php">Logout</a>
+  <a href="profile.php">My Profile </a>
+  <a href="staff.html"> Our Staff </a>
+</div>
+</header>
+ <div class="register">
+    <div class="formFields">
+
+ <h1>Detail Filling</h1>
+    <h3 align="center">Please fill in the details below so our consultants can contact you</h3>
+      <form action="courses.php" method="post" autocomplete="off">
+        <label for="fname">
+         First Name
+        </label>
+        <input type="text" name="fname" placeholder="First Name" id="fname" required><br>
+        <label for="lname">
+         Last Name
+        </label>
+        <input type="text" name="lname" placeholder="Last Name" id="lname" required> <br>
+        <label for="phno">
+         Phone  Number
+        </label>
+        <input type="tel" name="phno" placeholder="Phone Number" id="phno" required> <br>
+       
+        <label for="field">
+          Select Your Field 
+        </label>
+        <input type="text" name="field" placeholder="Field" id="field" required> <br>
+          <label for="field">
+         Interests
+        </label>
+        <input type="text" name="inter" placeholder="Interests" id="inter" required> <br>
+       
+        <div id="button">
+    
+   <input type="submit" name="save" value="Save Details" class="button"></button>
+   <button class="button" type="Reset"> <span>Reset</span> </button> <br>
+   
+      </form>
+    
+  </div>
+</div>
+</body>
+</html>

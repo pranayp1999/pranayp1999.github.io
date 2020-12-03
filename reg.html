@@ -1,0 +1,221 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Englebert ' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  
+<title> Registration </title>
+<script>
+    function valid(){ 
+     var user = document.forms["REG"]["user"];
+   if (user.value == "") { 
+            window.alert("Please enter your username"); 
+            user.focus(); 
+            return false; 
+        } 
+     var email = document.forms["REG"]["email"];
+   if (email.value == "") { 
+            window.alert("Please enter your email id"); 
+            email.focus(); 
+            return false; 
+        } 
+  var pass = document.forms["REG"]["password"];
+   if (pass.value == "") { 
+            window.alert("Please enter your password"); 
+            pass.focus(); 
+            return false; 
+        } 
+     var repass = document.forms["REG"]["repass"];
+   if (repass.value == "") { 
+            window.alert("Please confirm your password"); 
+            repass.focus(); 
+            return false; 
+        } 
+     // var phno = document.forms["REG"]["phno"];
+   // if (phno.value == "") { 
+  //           window.alert("Please enter your phone number"); 
+  //           phno.focus(); 
+  //           return false; 
+  //       }
+        
+         return true;
+     }
+
+</script>
+<style>
+
+  body {
+background-color: #d0fefe;
+  font-family: 'Englebert';font-size: 22px;
+  background-image: url("career.png");
+  
+}
+form {
+border: 4px solid #f1f1f1;
+margin: 0px;
+}
+h1 {text-align: center;}
+input[type=text], input[type=password], input[type=tel], input[type=email], input [type="checkbox"]  {
+  width: 100%;
+padding: 12px 20px;
+margin: 8px 0px;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 20px;
+background-color: #FAEBD7;
+}
+label {
+ 
+font-size: 30px;
+}
+
+img{
+  max-width: 100%
+  height="auto";
+}
+.button  {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #FAEBD7;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  
+ 
+  transition: all 0.5s;
+  cursor: pointer;
+  
+padding: 14px 20px;
+margin: 8px 0px;
+
+
+width: 100%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.register {
+    left: 50%;
+    top: 70%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    margin: 20px;
+}
+/*.container {
+  width: 300px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}*/
+.formFields {
+padding: 8px;
+}
+  /*  left: 50%;
+    top: 50%;
+    position: relative;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    margin: 20px;
+}*/
+</style>
+</head>
+
+<body>
+  <!-- <div class="grid"> -->
+  <!-- <div class="register"> -->
+    <div class="register">
+ 
+    <div class="formFields">
+  <!-- <form action="register.php" method="post" autocomplete="off">
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <fieldset>
+    <legend>Register</legend>
+    <label for="user"><b>Username</b></label>
+    <input type="text" placeholder="Username" id="username" ><br>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="password" name="password" > <br>
+    <label for="email"><b>Email ID</b></label>
+    <input type="email" placeholder="Enter Email" id="email" name="email"> <br>
+    
+    <label for="phno"><b>Phone Number</b></label>
+    <input type="tel" placeholder="Number" id="phno" > <br>
+    <hr>
+
+  <p> <input type="checkbox" name="check" required="true" >By creating an account you agree to our <a href="terms.html">Terms & Privacy</a>.</p>
+  <div id="button">
+    <input type="submit" value="Register">
+   <button class="button" onclick="return valid()"> <span>Submit</span>
+   <button class="button" type="Reset"> <span>Reset</span> </button> <br> -->
+  <!-- </div>
+
+    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+    </fieldset>
+ </form> -->
+ <h1>Please fill in the form to register your account</h1>
+  <!-- <fieldset> -->
+    <h1 align="center">Registration Form</h1>
+    
+      <form action="register.php" method="post" autocomplete="off">
+      	<fieldset>
+        <label for="username">
+         Username
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required><br>
+        <label for="password">
+         Password
+        </label>
+        <input type="password" name="password" placeholder="Password" id="password" required> <br>
+        <label for="email">
+          Email
+        </label>
+        <input type="email" name="email" placeholder="Email" id="email" required>
+        <p align="center"> <input type="checkbox" name="check" required="true" >By creating an account you agree to our <a href="terms.html">Terms & Privacy</a>.</p>
+        <div id="button">
+    
+   <button class="button" onclick="return valid()"> <span>Submit</span> </button>
+   <button class="button" type="Reset"> <span>Reset</span> </button> <br>
+   <p align="center">Already have an account? <a href="login.html">Sign in</a>.</p>
+      </form>
+ 		</fieldset>     
+ 	</div>
+    <!-- </fieldset> -->
+    <!-- </div> -->
+  
+</div>
+</body>
+</html>

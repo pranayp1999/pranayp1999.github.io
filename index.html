@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href='https://fonts.googleapis.com/css?family=Englebert ' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="styles.css" rel="stylesheet">
+
+<title> First Page </title>
+<script>
+    function valid(){ 
+     var user = document.forms["log"]["user"];
+   if (user.value == "") { 
+            window.alert("Please enter your username"); 
+            user.focus(); 
+            return false; 
+        }   
+   var pass = document.forms["log"]["password"];
+   if (pass.value == "") { 
+            window.alert("Please enter your password"); 
+            pass.focus(); 
+            return false; 
+        } 
+            return true;
+     }   
+
+</script>
+<style>
+
+/*#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+  }*/
+body {
+background-color: #d0fefe;
+  font-family: 'Englebert';font-size: 22px; color:white;
+  background-image: url("books.jpg");
+  /*background-image: url('one.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-width:1080px;
+  background-height:720px;
+  background-position:center;*/
+  }
+  .fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+input[type=text], input[type=password] {
+  width: 90%;
+  padding: 11px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #FAEBD7;
+}
+
+.login {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #FAEBD7;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.center 
+{
+text-align:center; 
+margin: auto;
+width: 60%;
+border: 5px ;
+padding: 10px;
+}
+.button1
+{
+border-radius: 280%;
+}
+</style>
+</head>
+
+<body>
+<!-- 	<a href="#" class="fa fa-facebook"></a>
+	<a href="#" class="fa fa-youtube"></a>
+	<a href="#" class="fa fa-instagram"></a>
+	<a href="#" class="fa fa-twitter"></a>
+	<h1 align ="center"> Miles Consultancy </h1>
+<form id="login" name="log" action="authenticate.php"  method="post">
+ <fieldset>
+  <legend>Welcome!</legend>
+  <label for="user"><b>Username</b></label>
+    <input type="text" placeholder="Username" id="user" ><br>
+   <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="pass" name="password" > <br>
+  <br>
+  <button class="button" onclick="return valid()" > <span>Submit</span> </button> <br>
+  <label align=center> New to the Site? Create an account! </label> <br>
+  <button class="button" formaction="reg.html" CausesValidation="false"> <span>Go! </span> </button>
+</fieldset>
+</form>
+
+ </div> -->
+   <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-youtube"></a>
+  <a href="#" class="fa fa-instagram"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  
+<div class="login">
+  <h1 align ="center"> Miles Consultancy </h1>    
+      <fieldset>
+  <legend>Login</legend>
+      <form method="post" action="authenticate.php">
+        <label for="username">
+          Username:
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+        <label for="password">
+          Password:
+        </label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+         <button class="button"> <span>Submit</span> </button></a> <br>
+          </form>
+        <label align=center> New to the Site? Create an account! </label> <br>
+        <a href="reg.html"><button class="button"> <span>Go! </span> </button></a>
+      </fieldset>
+    </div>
+</body>
+</html>
